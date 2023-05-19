@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <!-- Add your profile page styles here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #252222;
+            color: #f7ebeb;
+        }
+        .profile-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #1b1515;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c2b3b3;
+            text-align: center;
+        }
+        p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="profile-container">
+    <h2>Welcome to your Profile</h2>
+    <p id="first_name"></p>
+    <p id="last_name"></p>
+    <p id="username"></p>
+    <p id="email"></p>
+    <script>
+        // Retrieve user information from register.php using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "right-side/register.php", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var user = JSON.parse(xhr.responseText);
+                document.getElementById("first_name").innerHTML = "First Name: " + user.first_name;
+                document.getElementById("last_name").innerHTML = "Last Name: " + user.last_name;
+                document.getElementById("username").innerHTML = "Username: " + user.username;
+                document.getElementById("email").innerHTML = "Email: " + user.email;
+            }
+        };
+        xhr.send();
+    </script>
+</div>
+</body>
+</html>
