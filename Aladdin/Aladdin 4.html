@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Aladdin4.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger King</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="" alt="" height="100" ></a>
+    <div class="toggle"><a href="../../user.html"><img src="toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>Tiger King</span></h2>
+            <p>
+                Tiger King (subtitled in marketing as Tiger King: Murder, Mayhem, and Madness for its first season, Tiger King 2 for its second season and Tiger King: The Doc Antle Story for its third season) is an American true crime documentary streaming television series about the life of former zookeeper and convicted felon Joe Exotic.[1] The first season was released on Netflix on March 20, 2020.[2] A second season, Tiger King 2, was announced in September 2021 and was released on November 17, 2021, while a third season, Tiger King: The Doc Antle Story, was announced on December 3, 2021, and released one week later on December 12.[3][4] The series focuses on the small but deeply interconnected society of big cat conservationists such as Carole Baskin, owner of Big Cat Rescue, and collectors such as Exotic, whom Baskin accuses of abusing and exploiting wild animals.
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png" alt="">watch now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="Aladdin.mp4" controls="true"></video>
+        <img src="close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    </script>
+</body>
+</html>

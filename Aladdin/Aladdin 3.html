@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Aladdin3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aladdin</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="" alt="" height="100" ></a>
+    <div class="toggle"><a href="../../user.html"><img src="toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>The Great Hack</span></h2>
+            <p>
+                The Great Hack is a 2019 documentary film about the Facebook–Cambridge Analytica data scandal, produced and directed by Jehane Noujaim and Karim Amer, both previous documentary Academy Award nominees (The Square, Control Room, Startup.com).[1][2] The film's music was composed by Emmy-nominated film composer Gil Talmi. The Great Hack premiered at the 2019 Sundance Film Festival in the Documentary Premieres section and was released by Netflix on July 24, 2019.[3]
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png" alt="">watch now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="g.mp4" controls="true"></video>
+        <img src="close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    </script>
+</body>
+</html>
